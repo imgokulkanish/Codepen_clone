@@ -37,6 +37,7 @@ code {
 /* To make the collapse same even when there is some content */
 .editor-container.collapsed .CodeMirror-scroll {
   position: absolute;
+  overflow: hidden !important;
 }
 
 .editor-title {
