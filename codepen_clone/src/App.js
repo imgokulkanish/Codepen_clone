@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Editor from "./Components/Editor";
 import useLocalstorage from "./Hooks/useLocalstorage";
-
+import Header from "./Components/Header";
+import { BrowserRouter as Router } from "react-router-dom";
 const App = () => {
   const [html, setHtml] = useLocalstorage("html", "");
   const [css, setCss] = useLocalstorage("css","");
@@ -23,6 +24,7 @@ const App = () => {
   }, [html, css, js]);
   return (
     <>
+        <Header/>
       <div className="panel top-panel">
         <Editor
           language="xml"
